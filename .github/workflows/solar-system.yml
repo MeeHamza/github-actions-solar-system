@@ -24,11 +24,6 @@ jobs:
           uses: actions/setup-node@v4
           with:
             node-version: 20
-        - name: Check env
-          run: |
-            echo "MONGO_URI is $MONGO_URI"
-            echo "MONGO_USERNAME is $MONGO_USERNAME"
-            echo "MONGO_PASSWORD is set: ${MONGO_PASSWORD:+yes}"
 
         - name: Install Dependencies
           run: npm install
@@ -41,4 +36,5 @@ jobs:
           with:
             name: Mocha-Test-Result
             path: test-results.xml
+
 
